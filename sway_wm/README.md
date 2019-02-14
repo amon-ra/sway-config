@@ -17,6 +17,8 @@ This configurations use the following software/fonts/things:
 * Terminator (terminal emulator)
 * Terminus (TTF) font
 * pavucontrol / pactl
+* swaylock (AUR: swaylock-git)
+* swayidle (AUR: swayidle-git)
 * rofi (https://github.com/DaveDavenport/rofi)
 * playerctl (https://github.com/acrisci/playerctl)
 * light (https://github.com/haikarainen/light)

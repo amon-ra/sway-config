@@ -4,3 +4,7 @@
 
 # Default wallpaper
 output * bg $wallpaper fill
+
+# Disable main laptop screen
+bindsym $mod+F7 output eDP-1 disable
+bindsym $mod+F8 output eDP-1 enable
