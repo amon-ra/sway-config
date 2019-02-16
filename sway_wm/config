@@ -18,7 +18,7 @@ set $lockscreenbg ~/.config/sway/images/lockscreen_background.png
 default_border none
 
 # Stablish gaps between windows and from the screen edge
-gaps inner 10
+gaps inner 5
 gaps outer 1
 
 # Start a terminal

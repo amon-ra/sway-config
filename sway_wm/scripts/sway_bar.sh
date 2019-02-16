@@ -11,12 +11,20 @@ loadavg_5min=$(cat /proc/loadavg | awk -F ' ' '{print $2}')
 media_artist=$(playerctl metadata artist)
 media_song=$(playerctl metadata title)
 player_status=$(playerctl status)
+network=$(ip route get 1.1.1.1 | grep -Po '(?<=dev\s)\w+' | cut -f1 -d ' ')
 
 if [ $battery_plug = "discharging" ];
 then
     battery_pluggedin='⚠'
 else
     battery_pluggedin='⚡'
+fi
+
+if ! [ $network ]
+then
+   network_active="↹"
+else
+   network_active="⇆"
 fi
 
 if [ $player_status = "Playing" ]
@@ -29,7 +37,7 @@ else
     song_status='⏹'
 fi
 
-if [ $audio_muted = "true" ] 
+if [ $audio_muted = "true" ]
 then
     audio_active='🔇'
 else
@@ -41,4 +49,4 @@ fi
 #weather=$(curl -Ss 'https://wttr.in/Pontevedra?0&T&Q&format=1')
 #echo " $language 🌎 | $weather | 🔉 $audio_volume% | $battery_pluggedin $battery_charge | $date_formatted 🕘 $time"
 
-echo "🎧 $song_status $media_artist - $media_song                                  ⌨ $language | ♨ $loadavg_5min | $audio_active $audio_volume% | $battery_pluggedin $battery_charge | $date_formatted 🕘 $time"
+echo "🎧 $song_status $media_artist - $media_song                                  ⌨ $language | $network_active $network | 🏋 $loadavg_5min | $audio_active $audio_volume% | $battery_pluggedin $battery_charge | $date_formatted 🕘 $time"
