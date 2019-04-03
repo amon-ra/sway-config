@@ -5,6 +5,10 @@
 # Default wallpaper
 output * bg $wallpaper fill
 
+# Devices
+set $display_laptop eDP-1
+set $display_external DP-1
+
 # Disable main laptop screen
-bindsym $mod+F7 output eDP-1 disable
-bindsym $mod+F8 output eDP-1 enable
+bindsym $mod+F7 output $display_laptop disable
+bindsym $mod+F8 output $display_laptop enable

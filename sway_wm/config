@@ -1,6 +1,16 @@
 # SwayWM global configuration. For detailed information type "man sway"
 # Author: Oscar Carballal Prego <oscar.carballal@protonmail.com>
 
+###############################################################################
+# TODO:
+#   + Sway:
+#      - Autoassign workspaces to certain applications
+#      - Unlock keychain after login
+#      -
+#   + SwayBar:
+#     - Show language layout for currently used keyboard
+###############################################################################
+
 # Main definitions
 
 # Logo key. Use Mod1 for Alt.
