@@ -1,0 +1,14 @@
+max-visible=5
+max-history=1
+sort=-time
+layer=overlay
+anchor=top-center
+on-button-left=dismiss
+font='MesloLGS NF'
+background-color=#000000CC
+text-color=#FFFFFFFF
+border-size=0
+border-radius=10
+default-timeout=7000
+width=500
+
