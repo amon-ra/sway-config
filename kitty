@@ -1,0 +1,23 @@
+font_family MesloLGS NF
+font_size 10
+scrollback_lines 10000
+url_prefixes http https file ftp
+strip_trailing_spaces always
+focus_follows_mouse yes
+enable_audio_bell yes
+window_alert_on_bell yes
+bell_on_tab yes
+hide_window_decorations yes
+tab_bar_edge bottom
+tab_bar_style fade
+background_opacity 0.8
+dim_opacity 0.75
+allow_remote_control no
+linux_display_server wayland
+
+map alt+left neighboring_window left
+map alt+right neighboring_window right
+map shift+left move_window right
+map alt+up neighboring_window up
+map alt+down neighboring_window down
+map shift+down move_window up
