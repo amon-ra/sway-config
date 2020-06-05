@@ -1,0 +1,65 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces"],
+    "modules-right": ["custom/net", "custom/ping", "battery", "pulseaudio", "clock"],
+    "clock": {
+        "format": "{:%b %d %H:%M}",
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "bat":"BAT1",
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "custom/ping": {
+        "format": "{}",
+        "interval":10,
+        "exec": "$HOME/.config/waybar/get_ping.sh"
+    },
+    "custom/net": {
+        "format": "{}",
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/get_network.sh"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "8": "",
+            "9": "",
+            "10": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    }
+}
